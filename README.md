@@ -167,3 +167,169 @@ console.log(bitNumberOne ^ bitNumberTwo); // 30
 console.log(bitNumberOne << 1); // 20
 console.log(bitNumberOne << 5); // 320
 console.log(bitNumberOne >> 1); // 5
+
+PD12
+// 1. Užduotis: Suskaičiuoti paskaitų skaičių per savaitę ir kiek tai sudarys minučių.
+
+function skaiciuotiLaika() {
+    // Duomenys
+    const paskaituSkaicius = {
+        pirmadienis: 5,
+        antradienis: 6,
+        treciadienis: 4,
+        ketvirtadienis: 5,
+        penktadienis: 4
+    };
+    const paskaitosLaikasMinutemis = 45;
+
+    // Skaičiavimas
+    let visoPaskaitu = 0;
+    for (let diena in paskaituSkaicius) {
+        visoPaskaitu += paskaituSkaicius[diena];
+    }
+    const visoLaikoMinutemis = visoPaskaitu * paskaitosLaikasMinutemis;
+
+    // Rezultato išvedimas
+    console.log(`Paskaitų skaičius per savaitę - ${visoPaskaitu}. Tai sudaro ${visoLaikoMinutemis} minučių.`);
+}
+
+// Paleidimas
+skaiciuotiLaika();
+
+// 2. Užduotis: Apskaičiuoti pilnas ir likusias dėžutes su puodeliais.
+
+function apskaiciuotiDezes() {
+    // Duomenys
+    const puodeliuSkaicius = 7;
+    const puodeliuDezeje = 3;
+
+    // Skaičiavimas
+    const pilnuDeziu = Math.floor(puodeliuSkaicius / puodeliuDezeje);
+    const likusiosPuodeliai = puodeliuSkaicius % puodeliuDezeje;
+
+    // Rezultato išvedimas
+    console.log(`Pilnų dėžučių skaičius: ${pilnuDeziu}. Nesupakuotų puodelių skaičius: ${likusiosPuodeliai}.`);
+}
+
+// Paleidimas
+apskaiciuotiDezes();
+
+// 3. Užduotis: Apskaičiuoti plytų kiekį ir jų kainą.
+
+function apskaiciuotiPlytas() {
+    // Duomenys
+    const sienosIlgis = 4; // metrai
+    const sienosAukstis = 3; // metrai
+    const plytosIlgis = 20; // centimetrai
+    const plytosAukstis = 10; // centimetrai
+    const plytosKaina = 0.5; // Eur
+
+    // Skaičiavimas
+    const plytuSkaicius = Math.ceil((sienosIlgis * 100 / plytosIlgis) * (sienosAukstis * 100 / plytosAukstis));
+    const plytuKaina = (plytuSkaicius * plytosKaina).toFixed(2);
+
+    // Rezultato išvedimas
+    console.log(`Plytų kiekis ${plytuSkaicius}. Plytos kainuos ${plytuKaina} Eur.`);
+}
+
+// Paleidimas
+apskaiciuotiPlytas();
+
+// 4. Užduotis: Apskaičiuoti automobilio pravažiavimo laiką tuneliu.
+
+function automobilioLaikas() {
+    // Duomenys
+    const tunelioIlgis = 264; // metrai
+    const automobilioGreitisKmh = 60; // km/h
+
+    // Skaičiavimas
+    const laikasSekundemis = (tunelioIlgis / (automobilioGreitisKmh * 1000 / 3600)).toFixed(2);
+
+    // Rezultato išvedimas
+    console.log(`Automobilis tunelį pravažiuos per ${laikasSekundemis} s`);
+}
+
+// Paleidimas
+automobilioLaikas();
+
+// 5. Užduotis: Apskaičiuoti žuvų skaičių po n dienų.
+
+function zuvuSkaiciusPoDienas() {
+    // Duomenys
+    const pradinisZuvuSkaicius = 5;
+    const zuvuPridedamaPerDiena = 3;
+    const dienuSkaicius = 3;
+
+    // Skaičiavimas
+    const galutinisZuvuSkaicius = pradinisZuvuSkaicius + (zuvuPridedamaPerDiena * dienuSkaicius);
+
+    // Rezultato išvedimas
+    console.log(`Po ${dienuSkaicius} dienų akvariume gyvens ${galutinisZuvuSkaicius} žuvų.`);
+}
+
+// Paleidimas
+zuvuSkaiciusPoDienas();
+
+// 6. Užduotis: Apskaičiuoti vidutinį eglutės aukštį.
+
+function vidutinisEglutesAukstis() {
+    // Duomenys
+    const egluciuAukstis = [167, 134, 145, 156, 155, 176];
+    const egluciuKiekis = egluciuAukstis.length;
+
+    // Skaičiavimas
+    let suma = 0;
+    for (let aukstis of egluciuAukstis) {
+        suma += aukstis;
+    }
+    const vidutinisAukstis = (suma / egluciuKiekis).toFixed(1);
+
+    // Rezultato išvedimas
+    console.log(`Eglutės aukščio vidurkis: ${vidutinisAukstis} cm`);
+}
+
+// Paleidimas
+vidutinisEglutesAukstis();
+
+PD13
+let x = 5;
+let y = 10;
+
+if (x > y) {
+    console.log("Didesnis skaičius yra 'x'");
+} else {
+    console.log("Didesnis skaičius yra 'y'");
+}
+
+let x = 5;
+let y = 10;
+let z = -12;
+
+let sandauga = x * y * z;
+
+if (sandauga < 0) {
+    console.log("Sandaugos ženklas yra '-'");
+} else {
+    console.log("Sandaugos ženklas yra '+'");
+}
+let x = 2;
+let y = -2;
+let z = 4;
+
+let skaiciai = [x, y, z];
+skaiciai.sort((a, b) => a - b);
+
+console.log("Rezultatas:", skaiciai.join(", "));
+let a = 6;
+let b = -6;
+let c = 13;
+
+let diskriminantas = b ** 2 - 4 * a * c;
+
+if (diskriminantas > 0) {
+    console.log("Lygtis turi du skirtingus sprendinius.");
+} else if (diskriminantas === 0) {
+    console.log("Lygtis turi vieną sprendinį.");
+} else {
+    console.log("Lygtis neturi realiųjų skaičių sprendinių aibėje.");
+}
