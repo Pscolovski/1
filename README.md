@@ -104,3 +104,38 @@ console.log(numberOne - numberTwo); // Rezultatas: -10
 console.log(numberOne * numberTwo); // Rezultatas: 200
 console.log(numberOne / numberTwo); // Rezultatas: 0.5
 console.log(numberOne % numberTwo); // Rezultatas: 10 (liekana po dalybos)
+
+PD8
+let numberX = 10;
+let numberY = 20;
+let result = numberX + numberY;
+console.log(result); // 30
+result += 10;
+console.log(result); // 40
+result -= 10;
+console.log(result); // 30
+result *= 10;
+console.log(result); // 300
+result /= 10;
+console.log(result); // 30
+result %= 10;
+console.log(result); // 0
+result **= 10;
+console.log(result); // 0
+result += 10 + numberY;
+console.log(result); // 30
+result *= numberX - numberY;
+console.log(result); // -600
+
+PD9
+let numberX = 10;
+let numberY = '20';
+
+console.log(numberX == numberY); // true (verčiama į skaičių, lygu 10)
+console.log(numberX === numberY); // false (skirtingi tipai, skaičius ir string'as)
+console.log(numberX != numberY); // false (verčiama į skaičių, lygu 10)
+console.log(numberX !== numberY); // true (skirtingi tipai, skaičius ir string'as)
+console.log(numberX > numberY); // false (verčiama į skaičių, 10 nėra didesnis už 20)
+console.log(numberX < numberY); // true (verčiama į skaičių, 10 yra mažesnis už 20)
+console.log(numberX >= numberY); // false (verčiama į skaičių, 10 nėra didesnis arba lygus 20)
+console.log(numberX <= numberY); // true (verčiama į skaičių, 10 yra mažesnis arba lygus 20)
