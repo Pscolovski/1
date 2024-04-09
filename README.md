@@ -139,3 +139,31 @@ console.log(numberX > numberY); // false (verčiama į skaičių, 10 nėra dides
 console.log(numberX < numberY); // true (verčiama į skaičių, 10 yra mažesnis už 20)
 console.log(numberX >= numberY); // false (verčiama į skaičių, 10 nėra didesnis arba lygus 20)
 console.log(numberX <= numberY); // true (verčiama į skaičių, 10 yra mažesnis arba lygus 20)
+
+// PD10: Loginiai operatoriai
+let isTrue = true;
+let isFalse = false;
+
+console.log(isTrue && isTrue); // true
+console.log(isTrue && isFalse); // false
+console.log(isFalse && isFalse); // false
+console.log(isTrue || isTrue); // true
+console.log(isTrue || isFalse); // true
+console.log(isFalse || isFalse); // false
+console.log(!isTrue); // false
+console.log(!isFalse); // true
+console.log(!isFalse && isTrue); // true
+console.log(!isFalse && !isTrue); // false
+console.log(!isFalse || isTrue); // true
+
+// PD11: Bitiniai operatoriai
+let bitNumberOne = 10;
+let bitNumberTwo = 20;
+
+console.log(bitNumberOne & bitNumberTwo); // 0
+console.log(bitNumberOne | bitNumberTwo); // 30
+console.log(~bitNumberTwo); // -21
+console.log(bitNumberOne ^ bitNumberTwo); // 30
+console.log(bitNumberOne << 1); // 20
+console.log(bitNumberOne << 5); // 320
+console.log(bitNumberOne >> 1); // 5
